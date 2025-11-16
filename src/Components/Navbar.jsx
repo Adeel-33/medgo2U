@@ -5,7 +5,7 @@ import dropdownIcon from "../assets/HomePage/NavbarImages/dropdown_arrow.svg";
 import dottedLine from "../assets/HomePage/NavbarImages/dottedLine.svg";
 import GiftIcon from "../assets/HomePage/NavbarImages/Gift_Icon.svg";
 import { Menu, X } from "lucide-react"; // for hamburger icons
-
+import {Link} from "react-router-dom"
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -54,15 +54,14 @@ const Navbar = () => {
           </button>
 
           {isOpen && (
-            <ul className="absolute right-0 mt-3 w-56 bg-white p-3 border border-black/20 z-10 flex flex-col gap-2 rounded-lg shadow-md">
+            <ul className="absolute right-0 mt-3 w-56 bg-white p-3 border border-black/20 z-20 flex flex-col gap-2 rounded-lg shadow-md">
               <li className="font-semibold">Customer</li>
-              <li className="text-black/60">Login</li>
-              <li className="text-black/60">Sign Up</li>
+              <Link to="/signIn" className="text-black/60">Sign Up</Link>
               <li>Memberships</li>
               <hr className="border-dotted border-gray-300" />
               <li className="font-semibold">Healthcare Professionals</li>
-              <li className="text-black/60">Login</li>
-              <li className="text-black/60">Sign Up</li>
+              <Link to="/signIn" className="text-black/60">Login</Link>
+              <Link to="/signIn" className="text-black/60">Sign Up</Link>
               <li>Memberships</li>
             </ul>
           )}
@@ -119,15 +118,15 @@ const Navbar = () => {
               </button>
 
               {isOpen && (
-                <ul className="mt-3 bg-white p-3 border border-black/20 z-10 flex flex-col gap-2 rounded-lg shadow-md">
+                <ul className="mt-3 bg-white p-3 border border-black/20  flex flex-col gap-2 rounded-lg shadow-md z-20">
                   <li className="font-semibold">Customer</li>
-                  <li className="text-black/60">Login</li>
-                  <li className="text-black/60">Sign Up</li>
+                  <Link to="/signIn" className="text-black/60">Login</Link>
+                  <Link to="/signIn" className="text-black/60">Sign Up</Link>
                   <li>Memberships</li>
                   <hr className="border-dotted border-gray-300" />
                   <li className="font-semibold">Healthcare Professionals</li>
-                  <li className="text-black/60">Login</li>
-                  <li className="text-black/60">Sign Up</li>
+                  <Link to="/signIn" className="text-black/60">Login</Link>
+                  <Link to="/signIn" className="text-black/60">Sign Up</Link>
                   <li>Memberships</li>
                 </ul>
               )}
